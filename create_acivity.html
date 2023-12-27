@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">   
+                <div class="rectangle-box position-fixed bottom-0 start-0 end-0 "></div>
+                <div class="or overlay-rectangle position-relative rounded mt- mb-3 d-flex flex-column">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="images/logo.png" class="L2 img-fluid mt-3 ms-3" alt=""><a href="index.html" class="hm-link"></a>
+                            <p class="ms-5 mt-3">Create Activity</p>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center justify-content-end text-end me-3">
+                                <img src="images/icons/dashboard-icon.png" class="me-1 mt-2" alt="" width="25px" height="25px">
+                                <p class="mt-3 me-3"><a href="dashboard.html" class="hm-link">Dashboard</a></p>
+                                <img src="images/icons/logout-icon.png" class="me-1" alt="" width="20px" height="20px">
+                                <p class="mt-3 me-3"><a href="index.html" class="hm-link">Logout</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="boxca border border-dark rounded">
+                                <div class="row ms-3 mt-3">
+                                    <div class="col-auto">
+                                      <label for="title" class="col-form-label">Title:</label>
+                                    </div>
+                                    <div class="col-auto col-md-8">
+                                        <input type="text" id="title" class="form-control form-control-lg border-dark ms-4" aria-describedby="titleHelpInline">
+                                      </div>      
+                                  </div>
+                                  <div class="row ms-3 mt-5">
+                                    <div class="col-auto">
+                                        <label for="title" class="col-form-label">Content:</label>
+                                      </div>
+                                      <div class="col-auto col-md-10">
+                                        <div class="input-group">
+                                          <textarea class="content form-control border-dark" placeholder="Write your content here..." aria-describedby="contentHelpInline" rows="4"></textarea>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="row">
+                                        <div class="col">
+                                            <div class="d-flex align-items-center" onclick="navigateToUserGallery()">
+                                                <button class="ap inline mt-3 rounded-pill">
+                                                    <div class="d-flex align-items-center">
+                                                        <img src="images/icons/photo.png" class="photo ms-0" alt="">
+                                                        <p class="ms-2" style="white-space: nowrap; margin-bottom: 0;">Add Photo</p>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    </div>
+                                  </div> 
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                        <div class="row">
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-5">
+                                <button class="btn btn-secondary me-5 border-dark" type="button">Done</button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function navigateToUserGallery() {
+                // Implement logic to navigate to the user's gallery
+                // For example, you can use window.location.href or any other navigation method
+                // You might fetch the user's gallery URL dynamically here based on your system's logic
+        
+                // For illustration purposes, let's assume a dynamic URL
+                var userGalleryUrl = '/users/' + getUserId() + '/gallery'; // Replace this with your actual logic
+        
+                // Navigate to the user's gallery
+                window.location.href = userGalleryUrl;
+            }
+        
+            function getUserId() {
+                // Implement logic to get the current user's ID
+                // Replace this with your actual logic to retrieve the user's ID
+                return '123'; // Placeholder ID, replace with actual ID retrieval logic
+            }
+        </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
+                

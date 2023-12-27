@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&family=Krona+One&family=Montserrat&family=Poppins&family=Quicksand&family=Roboto&display=swap');
+
+body {
+    background: url('images/background.png') no-repeat center center fixed;
+    background-size: 100% 100%;
+}
+.row{
+    font-family: 'Krona One', sans-serif;
+}
+.rectangle-box {
+    width: 100vw;
+    height: 150px; 
+    background-color: #83C10C; 
+}
+.overlay-rectangle {
+    width: 90vw;
+    height: 90vh;
+    background-color: rgba(237, 237, 237, 0.7);
+    position: relative;
+    z-index: 500;
+    position: sticky;
+    z-index: 999;
+    margin-top: 100px;
+}
+.overlay-text {
+    margin-top: 200px;
+}
+.navbar {
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Krona One', sans-serif;
+     transition: background-color 0.3s ease;
+}
+.navbar-scrolled {
+    background-color: #cec2c2; /* Set the desired background color when scrolled */
+}
+.btn a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set text color to white */
+}
+
+/* sign up */
+.box{
+    width: 455px;
+    height: 120vh; 
+    background-color: floralwhite;
+}
+.transparent{
+    width: 100%;
+    height: 120vh;
+    background-color: rgba(237, 237, 237, 0.5);
+}
+.box2 {
+    width: 35%;
+    min-height: 70vh; /* Set a minimum height */
+    margin-top: 130px;
+    background-color: #83C10C;
+    display: flex; /* Use flexbox to make child elements expand */
+    flex-direction: column; /* Stack child elements vertically */
+}
+.L2{
+    width: 50%;
+    height: 90px;
+}
+.google{
+    width: 30px;
+    height: 30px;
+}
+.inline {
+    text-align: center;
+}
+.inline p, .inline img {
+    display: inline-block;
+    vertical-align: middle;
+}
+.input-group > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.custom-button{
+    background-color: floralwhite;
+}
+ .input-group:hover .invalid-feedback {
+    display: block;
+}
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+/* login */
+.boxlog{
+    width: 455px;
+    height: 100vh; 
+    background-color: floralwhite;
+}
+.transparentL{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(237, 237, 237, 0.5);
+}
+.boxl{
+    width: 35%;
+    height: 70vh;
+    margin-top: 130px;
+    background-color: #83C10C;
+}
+
+/* dashboard */
+.hm-link{
+    text-decoration: none;
+    color: black !important;
+}
+.card{
+    width: 350px;
+    height: 400px;
+}
+.cardb{
+    margin-top: 90px;
+}
+.btnd{
+    width: 230px;
+    height: 100px;
+    background-color: #1B528B;
+}
+.wu{
+    margin-top: 150px;
+}
+
+/* about */
+.logo{
+    width: 400px;
+    height: 160px;
+}
+.copyright{
+    margin-top: 100px;
+}
+.about{
+    margin-top: 100px;
+}
+
+/* activities */
+.or{
+    margin-top: 50px;
+}
+.act{
+    text-decoration: none;
+    color: white !important;
+}
+.ab{
+    background-color: #D9D9D9;
+}
+.cab{
+    background-color: #1B528B;
+}
+/* Custom style for the folder container */
+.folder-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* Custom style for the folder icon */
+.folder-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Optional: Adjust the label style */
+.folder-label {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* create_activity */
+.boxca{
+    width: 75vw;
+    height: 300px;
+    background-color: #D9D9D9;
+}
+.content {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+  }
+  
+  /* Add padding and some border radius for better aesthetics */
+  .input-group textarea {
+    padding: 8px;
+    border-radius: 6px;
+  }
+  
+.pb{
+    height: 30px;
+    width: 90px;
+}
+.photo{
+    height: 20px;
+    width: 20px;
+    margin-left: 50px;
+}
+.ap{
+    margin-left: 100px;
+    background-color: #D9D9D9;
+}

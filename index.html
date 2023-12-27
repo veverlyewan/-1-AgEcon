@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgEcon Portal</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="custom.css">
+    <link rel="stylesheet" href="https://startbootstrap.com/theme/freelancer/">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+</head>
+<body id="page-top">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Navigation -->
+            <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg text-uppercase fixed-top top-0 rounded" id="mainNav">
+                <div class= "container">
+                    <a class="navbar-brand" href="#page-top">AgEcon Portal</a>
+                    <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                        Menu
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="signup.html">Sign Up</a></li>
+                            <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="login.html">Login</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        </div>
+        <div class="row">
+        <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">   
+            <div class="rectangle-box position-fixed bottom-0 start-0 end-0 "></div>
+            <div class="overlay-rectangle position-relative rounded mb-5 h-100 d-flex flex-column">
+                <div class="row" id="landing">
+                    <div class="col-12 text-center mt-5 mb-5">
+                        <img src="images/logo.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-8 text-center">
+                        <p class="fs-5">AgEcon Portal, your personalized gateway to enriching learning and professional development. This web-based platform connects you to a wealth of resources, empowering you to cultivate your knowledge, ignite new ideas, and unlock your full potential.</p>
+                    </div>
+                    <div class="col-lg-2"></div>
+                </div>
+                <!-- About Section-->
+                <div class="row" id="about">
+                    <section class="about page-section text-black">
+                        <div class="container">
+                            <!-- About Section Heading-->
+                            <h2 class="page-section-heading text-center text-uppercase text-black">About</h2>
+                            <!-- Icon Divider-->
+                            <div class="divider-custom divider-light text-center">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                            <!-- About Section Content-->
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <img src="images/logo.png" class="logo rounded mx-auto d-block mb-2 img-fluid" alt="">
+                                    <p class="text-success-emphasis text-center">Ag stands for Agriculture, Econ stands for Economics</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-2"></div>
+                                <div class="col-lg-8">
+                                    <p class="text-center">The AgEcon Portal is dedicated to fueling the professional 
+                                        growth and knowledge of faculty members within the Department 
+                                        of Agriculture and Economics (DA&E). Established in response to 
+                                        your need for a streamlined and centralized resource, this web 
+                                        platform bridges the gap between faculty development initiatives 
+                                        and readily accessible learning opportunities.</p>
+                                </div>
+                                <div class="col-lg-2"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-4"></div>
+                                <div class="col-lg-4 text-center copyright">
+                                    <p class="mb-0" style="font-size: 0.8em;">Caraga State University</p>
+                                    <p style="font-size: 0.6em;">Ampayon, Butuan City</p>
+                                </div>
+                                <div class="col-lg-4"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 inline">
+                                    <p class="text-center" style="font-size: 0.5em;">All rights reserved. <img src="images/icons/copyright-icon.png" alt=""></p>
+                                </div>
+                            </div> 
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div> 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var navbar = document.querySelector('.navbar');
+            var overlayRectangle = document.querySelector('.overlay-rectangle');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 0) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            });
+        });
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

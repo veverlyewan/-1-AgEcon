@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">   
+                <div class="rectangle-box position-fixed bottom-0 start-0 end-0 "></div>
+                <div class="or overlay-rectangle position-relative rounded mb-5 h-100 d-flex flex-column">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="images/logo.png" class="L2 img-fluid mt-3 ms-3" alt=""><a href="index.html" class="hm-link"></a>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center justify-content-end text-end me-3">
+                                <img src="images/icons/dashboard-icon.png" class="me-1 mt-2" alt="" width="25px" height="25px">
+                                <p class="mt-3 me-3"><a href="dashboard.html" class="hm-link">Dashboard</a></p>
+                                <img src="images/icons/logout-icon.png" class="me-1" alt="" width="20px" height="20px">
+                                <p class="mt-3 me-3"><a href="index.html" class="hm-link">Logout</a></p>
+                            </div>
+                            <p class="text-end me-5">Webinars</p>
+                        </div>         
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="input-group mb-3">
+                                <input type="text" class="ab form-control border-dark rounded ms-5 mt-3" placeholder="Search..." aria-label="Search" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary mt-3" type="button">Search</button>
+                                </div>
+                            </div>
+                            <button type="button" class="cab btn btn-secondary text-white border-dark rounded-pill ms-5"><a href="create_webinar.html">Create Webinar</a></button>
+                        </div>
+                    </div>
+                    <!-- Second row for folders -->
+                    <div class="row justify-content-center mt-5">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10 d-flex">
+                            <!-- Folder container using Bootstrap classes -->
+                            <div id="folderContainer" class="d-flex">
+                                <!-- Folders will be dynamically added here -->
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Dummy data for folders (you can replace it with real data)
+            var folders = [
+                { id: 1, name: 'Folder 1' },
+                { id: 2, name: 'Folder 2' },
+                { id: 3, name: 'Folder 3' },
+                { id: 4, name: 'Folder 4' },
+                { id: 5, name: 'Folder 5' },
+                { id: 6, name: 'Folder 6' }
+                // Add more folders as needed
+            ];
+    
+            // Function to render folders
+            function renderFolders() {
+                // Clear existing folders
+                $('#folderContainer').empty();
+    
+                // Loop through folders in reverse order to achieve LIFO behavior
+                for (var i = 0; i < folders.length; i++) {
+                    var folder = folders[i];
+                    var folderElement = $('<div class="me-3"></div>');
+                    // Updated folder icon element with custom style
+                    var iconElement = $('<div class="folder-icon border-dark" style="font-size: 2rem; width: 150px; height: 150px;"><span class="bi bi-folder" style="font-size: 2rem;"></span></div>');
+                    var labelElement = $('<div class="folder-label text-center mt-2">' + folder.name + '</div>');
+    
+                    // Append folder elements to the container
+                    folderElement.append(iconElement);
+                    folderElement.append(labelElement);
+                    $('#folderContainer').append(folderElement);
+                }
+            }
+    
+            // Initial rendering
+            renderFolders();
+    
+            // Example: Redirect to create activity page
+            $('.cab').click(function() {
+                // Replace the window.location.href with the actual URL of your create activity page
+                window.location.href = 'create_activity.html';
+            });
+        });
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="custom.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row position-relative">
+            <div class="col-md-6 col-12">
+                <div class="boxlog position-absolute bottom-0 start-0">
+                    <a href="index.html">
+                    <img src="images/logo.png" class="L2 img-fluid mt-3 ms-3" alt=""></a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-8 transparentL">              
+                <div class="boxl position-absolute rounded ms-5">
+                    <div class="row">
+                        <div class="col">
+                            <h4 class="text-center mt-3">Login</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-8 mx-auto mt-3">
+                            <label for="email" class="form-label mt-3">Email</label>
+                            <input type="text" id="email" class="form-control text-black border border-dark rounded" aria-describedby="emailHelpBlock">                   
+                            <label for="password" class="form-label mt-3">Password</label>
+                                <div class="input-group">
+                                    <input id="password" class="form-control text-black border border-dark rounded" type="password" aria-label="Password" required>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary border-dark custom-button" type="button" id="togglePassword">
+                                            &#128064; <!-- Unicode character for an eye symbol -->
+                                        </button>
+                                    </div>
+                                    <div class="invalid-feedback">
+                                        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                                    </div>
+                                </div>            
+                        </div>                    
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <button class="btn btn-success mt-5" type="submit"><a href="dashboard.html">Login</a></button>
+                        </div>
+                    </div> 
+                </div>
+                <div class="row">
+                    <div class="col-12 col-lg-5"></div>
+                    <div class="col-12 col-lg-6">
+                        <p class="overlay-text text-center text-black">The AgEcon Portal is more than just a repository of resources; it's a thriving community of passionate professionals eager to learn, grow, and contribute to the advancement of agriculture and economics. Come join us on this journey of continuous exploration and empower your path to success!</p>
+                    </div>
+                    <div class="col-12 col-lg-1"></div>
+                </div>
+            </div>       
+         </div>   
+    </div>  
+    <script>
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            var passwordInput = document.getElementById('password');
+            var type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordInput.setAttribute('type', type);
+            var eyeIcon = this.querySelector('i');
+            eyeIcon.classList.toggle('bi-eye');
+            eyeIcon.classList.toggle('bi-eye-slash');
+        });
+    </script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

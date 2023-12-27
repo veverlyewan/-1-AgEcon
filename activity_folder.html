@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">  
+    <link rel="stylesheet" href="custom.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">   
+                <div class="rectangle-box position-fixed bottom-0 start-0 end-0 "></div>
+                <div class="or overlay-rectangle position-relative rounded mt- mb-3 d-flex flex-column">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <img src="images/logo.png" class="L2 img-fluid mt-3 ms-3" alt=""><a href="index.html" class="hm-link"></a>
+                        </div>
+                        <div class="col-lg-8">
+                            <div class="d-flex align-items-center justify-content-end text-end me-3">
+                                <img src="images/icons/dashboard-icon.png" class="me-1 mt-2" alt="" width="25px" height="25px">
+                                <p class="mt-3 me-3"><a href="dashboard.html" class="hm-link">Dashboard</a></p>
+                                <img src="images/icons/logout-icon.png" class="me-1" alt="" width="20px" height="20px">
+                                <p class="mt-3 me-3"><a href="index.html" class="hm-link">Logout</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="collg-12">
+                            <p class="ms-5 mt-3 text-center">Create Activity</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-1"></div>
+                        <div class="col-lg-10">
+                            <div class="boxca border border-dark rounded d-flex flex-column">
+                                <div class="row ms-3 mt-3">
+                                    <div class="col-auto">
+                                      <label for="title" class="col-form-label">Title:</label>
+                                    </div>
+                                    <div class="col-auto col-md-8">
+                                        <input type="text" id="title" class="form-control form-control-lg border-dark ms-4" aria-describedby="titleHelpInline">
+                                      </div>      
+                                  </div>
+                                  <div class="row ms-3 mt-5">
+                                    <div class="col-auto">
+                                        <label for="title" class="col-form-label">Content:</label>
+                                      </div>
+                                      <div class="col-auto col-md-10">
+                                        <div class="input-group">
+                                          <textarea class="content form-control border-dark" aria-describedby="contentHelpInline" rows="4"></textarea>
+                                        </div>
+                                      </div>                       
+                                    </div>
+                                    <div class="d-grid gap-2 mt-5 ms-5 mb-3 mt-auto d-md-block">
+                                        <button class="btn btn-secondary border-dark me-2" type="button"><a href="create_acivity.html">Update</a></button>
+                                        <button class="btn btn-secondary border-dark" type="button" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Delete</button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal HTML -->
+    <div class="modal row" tabindex="-1" role="dialog" id="deleteConfirmationModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Delete Confirmation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to delete?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteItem()">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function redirectToEditPage() {
+            // Assuming create_activity.html is in the same directory
+            window.location.href = 'create_activity.html';
+        }
+
+        function deleteItem() {
+            // Perform the actual deletion logic here
+            // For now, let's just show an alert
+            alert("Deleted successfully");
+
+            // Optionally, close the modal after deletion
+            $('#deleteConfirmationModal').modal('hide');
+        }
+    </script>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
