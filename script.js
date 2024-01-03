@@ -1,4 +1,4 @@
-fetch('https://reqres.in/api/users',{
+fetch('https://portal.test/api/users',{
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
