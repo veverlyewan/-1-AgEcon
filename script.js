@@ -1,4 +1,4 @@
-fetch('https://portal.test/api/users',{
+fetch('http://portal.test/api/user', {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'
@@ -8,7 +8,10 @@ fetch('https://portal.test/api/users',{
     })
 })
     .then(res => {
-        return res.json()
+        if (!res.ok) {
+            throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+        return res.json();
     })
     .then(data => console.log(data))
-    .catch(error => console.log('ERROR'))
+    .catch(error => console.error('Error:', error));
